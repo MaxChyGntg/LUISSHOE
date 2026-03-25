@@ -146,9 +146,7 @@ body {
 }
 
 .hero img {
-    position: relative;
-    left: 0;
-    top: 0;
+    margin-top: 50px;
     width: 16%;
     border-radius: 50px;
 }
@@ -171,7 +169,9 @@ body {
     text-underline-offset: 10px;
     transition: text-decoration 5s ease;
 }
-
+    .arrow-scroll {
+        color: var(--text-hero);
+    }
 .hero a {
     border: none;
     padding: 12px;
@@ -299,7 +299,15 @@ body {
     display: none;
 }
 
-
+.oneday{
+    padding: 12px;
+    border-radius: 30px;
+    outline: 1px solid var(--text-hero);
+    margin-top: 20px;
+}
+.oneday span{
+    font-weight: 200;
+}
 
 /* Testimonials */
 
@@ -578,7 +586,8 @@ body {
 
     /* hero */
     .hero img {
-        width: 35%;
+        width: 45%;
+        margin-top: 50px;
     }
 
     .hero p {
@@ -599,6 +608,9 @@ body {
 
     .card {
         width: 90%;
+    }
+    .oneday h1{
+        font-size: 20px;
     }
 
     /* Testimonials */
