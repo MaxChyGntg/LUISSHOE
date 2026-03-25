@@ -36,3 +36,6 @@ toggle.addEventListener("click", () => {
   }
 });
 
+function coming() {
+  window.alert("COMING SOON")
+}

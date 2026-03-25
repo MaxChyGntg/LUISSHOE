@@ -22,7 +22,11 @@
     font-family: 'poppins', 'montserrat';
     scroll-behavior: smooth;
 }
-#about, #service, #testimoni, #cabang{
+
+#about,
+#service,
+#testimoni,
+#cabang {
     scroll-margin-top: 110px;
 }
 
@@ -93,7 +97,8 @@ body {
     text-decoration-color: #dcdcdc;
     text-underline-offset: 10px;
 }
-.contact-btn a{
+
+.contact-btn a {
     color: var(--bg-card);
 }
 
@@ -255,7 +260,7 @@ body {
 
 .ask:hover {
     background-color: var(--bg-secondary);
-    color: var(--text-secondary) ;
+    color: var(--text-secondary);
 }
 
 .card-extra {
@@ -365,27 +370,30 @@ body {
         transform: translateX(-50%);
     }
 }
+
 /* Cabang */
 
-.cabang{
+.cabang {
     background-color: var(--bg-cabang);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 1100px;
+    height: 800px;
 }
-.cabang-h1{
+
+.cabang-h1 {
     color: var(--text-extra);
 }
-.cabang-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+
+.cabang-container {
+    display: flex;
     gap: 20px;
     align-items: stretch;
     margin: 10px;
 }
-.card-location{
+
+.card-location {
     background-color: white;
     border-radius: 3px;
     outline: 4px solid var(--text-secondary);
@@ -394,22 +402,28 @@ body {
     justify-content: space-around;
     padding: 12px;
     gap: 20px;
+    width: 320px;
 }
-.card-location span{
+
+.card-location span {
     font-size: 20px;
 }
-.card-btn-container{
+
+.card-btn-container {
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
-.card-btn-container button{
+
+.card-btn-container button {
     padding: 10px;
+    width: 260px;
     background: none;
     font-size: 16px;
     cursor: pointer;
 }
-.card-btn-container button:hover{
+
+.card-btn-container button:hover {
     outline: 1px solid orangered;
 }
 
@@ -525,7 +539,7 @@ body {
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1008px) {
     .nav-toggle {
         display: block;
         position: static;
@@ -586,14 +600,21 @@ body {
     .card {
         width: 90%;
     }
+
     /* Testimonials */
-    .slide-track{
+    .slide-track {
         width: min-content;
     }
+
     /* Cabang */
-    .cabang{
+    .cabang {
         height: 1300px;
     }
+    .cabang-container{
+        display: grid;
+        grid-template-columns: minmax(auto-fit, 230px, 1fr);
+    }
+
     /* footer */
     .footer-container {
         flex-direction: column;
