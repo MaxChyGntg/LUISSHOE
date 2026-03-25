@@ -5,11 +5,14 @@
     --bg-main: #ffffff;
     --bg-secondary: #f7f4ec;
     --bg-card: #ffffff;
-
+    --bg-herobtn: #fff;
+    --bg-cabang: #d6cfbe;
     --text-main: #111;
     --text-secondary: #555;
+    --text-third: rgb(230, 230, 230);
     --text-extra: #fff;
-    --accent: #ae445a;
+    --accent: #000000;
+    --text-hero: #000;
 }
 
 * {
@@ -19,16 +22,20 @@
     font-family: 'poppins', 'montserrat';
     scroll-behavior: smooth;
 }
+#about, #service, #testimoni, #cabang{
+    scroll-margin-top: 110px;
+}
 
 body.dark {
     --bg-main: #0f0f0f;
     --bg-secondary: #1a1a1a;
     --bg-card: #1f1f1f;
-
+    --bg-herobtn: #000;
+    --bg-cabang: #292828;
     --text-main: #f1f1f1;
     --text-secondary: #aaa;
-
-    --accent: #ff5c7a;
+    --text-hero: #fff;
+    --accent: #000000;
 }
 
 body {
@@ -86,9 +93,12 @@ body {
     text-decoration-color: #dcdcdc;
     text-underline-offset: 10px;
 }
+.contact-btn a{
+    color: var(--bg-card);
+}
 
 .meme-btn {
-    background-color: var(--accent);
+    background-color: var(--text-main);
     padding: 12px;
     border-radius: 30px;
     font-weight: 800;
@@ -151,8 +161,8 @@ body {
     font-weight: 600;
     cursor: pointer;
     text-decoration: underline;
-    color: var(--text-main);
-    text-decoration-color: #000000;
+    color: var(--text-hero);
+    text-decoration-color: var(--text-hero);
     text-underline-offset: 10px;
     transition: text-decoration 5s ease;
 }
@@ -167,7 +177,7 @@ body {
 }
 
 .hero a:hover {
-    background-color: var(--accent);
+    background-color: var(--bg-herobtn);
 }
 
 
@@ -194,7 +204,7 @@ body {
 .service-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
-    gap: 10px;
+    gap: 30px;
     align-items: start;
 }
 
@@ -237,14 +247,15 @@ body {
 .ask {
     text-decoration: none;
     color: #fff;
-    background-color: #ae445a;
-    padding: 10px;
+    background-color: var(--accent);
+    padding: 4px;
     border-radius: 30px;
     transition: background-color 0.7s ease;
 }
 
 .ask:hover {
-    background-color: #da3455;
+    background-color: var(--bg-secondary);
+    color: var(--text-secondary) ;
 }
 
 .card-extra {
@@ -292,7 +303,7 @@ body {
     overflow: hidden;
     padding: 40px 0;
     position: relative;
-    background-color: var(--accent);
+    background-color: var(--bg-secondary);
 }
 
 .testimoni h1 {
@@ -351,16 +362,62 @@ body {
     }
 
     100% {
-        transform: translateX(-45%);
+        transform: translateX(-50%);
     }
 }
+/* Cabang */
 
+.cabang{
+    background-color: var(--bg-cabang);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 1100px;
+}
+.cabang-h1{
+    color: var(--text-extra);
+}
+.cabang-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    align-items: stretch;
+    margin: 10px;
+}
+.card-location{
+    background-color: white;
+    border-radius: 3px;
+    outline: 4px solid var(--text-secondary);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 12px;
+    gap: 20px;
+}
+.card-location span{
+    font-size: 20px;
+}
+.card-btn-container{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.card-btn-container button{
+    padding: 10px;
+    background: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+.card-btn-container button:hover{
+    outline: 1px solid orangered;
+}
 
 /* More info */
 
 .info {
-    background: #111;
-    color: #eee;
+    background: var(--bg-main);
+    color: var(--text-main);
     text-align: center;
     padding: 60px 20px;
 }
@@ -532,6 +589,10 @@ body {
     /* Testimonials */
     .slide-track{
         width: min-content;
+    }
+    /* Cabang */
+    .cabang{
+        height: 1300px;
     }
     /* footer */
     .footer-container {
