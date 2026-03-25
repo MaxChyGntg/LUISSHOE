@@ -529,7 +529,10 @@ body {
     .card {
         width: 90%;
     }
-
+    /* Testimonials */
+    .slide-track{
+        width: min-content;
+    }
     /* footer */
     .footer-container {
         flex-direction: column;
