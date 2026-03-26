@@ -20,6 +20,10 @@ if (navclose) {
   })
 }
 
+function coming(){
+  window.alert("COMING SOON!")
+}
+
 const buttons = document.querySelectorAll("#showmore");
 
 buttons.forEach(btn => {
@@ -30,10 +34,7 @@ buttons.forEach(btn => {
 });
 
 
-// 🌙 DARK MODE (FIXED + LOCALSTORAGE)
 const toggle = document.getElementById("dark-toggle");
-
-// 1. Apply saved theme saat load
 const savedTheme = localStorage.getItem("theme");
 
 if (savedTheme === "dark") {
@@ -43,16 +44,14 @@ if (savedTheme === "dark") {
   toggle.innerHTML = '<i class="bi bi-moon"></i>';
 }
 
-// 2. Toggle saat diklik
 toggle.addEventListener("click", () => {
   document.body.classList.toggle("dark");
 
   const isDark = document.body.classList.contains("dark");
 
-  // simpan ke localStorage
+
   localStorage.setItem("theme", isDark ? "dark" : "light");
 
-  // update icon
   toggle.innerHTML = isDark
     ? '<i class="bi bi-sun"></i>'
     : '<i class="bi bi-moon"></i>';
