@@ -58,7 +58,16 @@ toggle.addEventListener("click", () => {
     : '<i class="bi bi-moon"></i>';
 });
 
+const fadeImages = document.querySelectorAll(".hero-fade .fade-img");
 
-function coming() {
-  window.alert("COMING SOON")
+let indexFade = 0;
+
+if (fadeImages.length > 0) {
+  setInterval(() => {
+    fadeImages[indexFade].classList.remove("active");
+
+    indexFade = (indexFade + 1) % fadeImages.length;
+
+    fadeImages[indexFade].classList.add("active");
+  }, 3000);
 }

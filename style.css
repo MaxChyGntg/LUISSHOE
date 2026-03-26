@@ -128,63 +128,108 @@ body {
     color: var(--text-secondary);
     font-size: 20px;
     cursor: pointer;
+    display: block;
 }
 
 
 /* Hero */
-.hero {
-    background-color: var(--bg-secondary);
-    height: 650px;
-    padding: 7px 8px;
+.hero-fade {
+  padding: 120px 20px 80px;
+  text-align: center;
+  background: var(--bg-main);
+  color: var(--text-main);
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  justify-content: center;
+}
+
+.hero-fade .hero-inner {
+  max-width: 900px;
+  margin: auto;
     width: 100%;
-    position: relative;
-    gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* INI KUNCI */
 }
 
-.hero img {
-    margin-top: 50px;
-    width: 16%;
-    border-radius: 50px;
+.hero-fade .hero-logo {
+  width: 120px;
+  border-radius: 20px;
+  margin-bottom: 20px;
 }
 
-.hero p {
-    text-align: center;
-    color: var(--text-main);
-    font-size: 23px;
+.hero-fade h1 {
+  font-size: 32px;
+  margin-bottom: 15px;
 }
 
-.hero button {
-    border: none;
-    background: none;
-    font-size: 23px;
-    font-weight: 600;
-    cursor: pointer;
-    text-decoration: underline;
-    color: var(--text-hero);
-    text-decoration-color: var(--text-hero);
+.hero-fade .cta-btn {
+  margin-top: 15px;
+  padding: 12px 26px;
+  border-radius: 30px;
+  border: none;
+  background: var(--text-hero);
+  color: var(--bg-main);
+  cursor: pointer;
+}
+.hero-fade .cta-btn:hover{
+        text-decoration: underline;
+    text-decoration-color: var(--bg-main );
     text-underline-offset: 10px;
-    transition: text-decoration 5s ease;
 }
-    .arrow-scroll {
-        color: var(--text-hero);
-    }
-.hero a {
-    border: none;
-    padding: 12px;
-    background: none;
-    border-radius: 30px;
-    transition: 0.7s ease;
-    cursor: pointer;
+.hero-fade .ba-label {
+  margin-top: 25px;
+  font-size: 14px;
+  color: var(--text-secondary);
 }
 
-.hero a:hover {
-    background-color: var(--bg-herobtn);
+/* SLIDER */
+.hero-fade .fade-slider {
+ position: relative;
+
+  width: 100%;
+  max-width: 1000px;
+
+  height: 380px;
+
+  margin:  0 auto; /* center horizontal */
+  overflow: hidden;
+
+  border-radius: 20px;
 }
 
+/* IMAGE */
+.hero-fade .fade-img {
+    margin-top: 10px;
+   position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  background: var(--bg-main);
+    border-radius: 10px;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+/* ACTIVE */
+.hero-fade .fade-img.active {
+    z-index: 1;
+  opacity: 1;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero-fade .fade-slider {
+    height: 280px;
+  }
+}
 
 
 /* Services */
@@ -648,6 +693,16 @@ body {
         margin-top: 70px;
     }
 }
+/* MOBILE */
+@media (max-width: 768px) {
+  .book {
+    width: 250px;
+    height: 320px;
+    margin-right: 230px;
+  }
+}
+
+
 .show-menu {
     right: 0;
 }
