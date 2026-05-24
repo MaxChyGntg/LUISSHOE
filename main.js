@@ -20,6 +20,12 @@ if (navclose) {
   })
 }
 
+if(navMenu){
+  navMenu.addEventListener("click", () => {
+    navMenu.classList.remove('show-menu')
+  })
+}
+
 function coming(){
   window.alert("COMING SOON!")
 }
